@@ -1,0 +1,22 @@
+{
+	"env": {
+		"browser": true
+	},
+	"extends" : [
+		"standard"
+	],
+	"globals": {
+		"__DEV__": false,
+		"__PROD__": false,
+		"__DEBUG__": false
+	},
+	"rules": {
+		// 0 关闭规则， 1 警告， 2 执行规则
+		// 不检查分号
+		"semi": [0],
+		"indent": [2, 0],
+		"no-multiple-empty-lines": [0],
+		"space-before-function-paren": [0],
+		"no-multiple-empty-lines": [0]
+	}
+}

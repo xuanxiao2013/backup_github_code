@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>居中</title>
+	<link type="text/css" rel="stylesheet" href="normalize.css" />
+    <style>
+        .border {
+            border:1px solid green;
+            height:50px;
+        }
+        .clearfix:after {
+            content:".";
+            visibility: hidden;
+            display: block;
+            height: 0;
+            clear: both;
+        }
+		.clearfix{
+			zoom:1;
+		}
+    </style>
+</head>
+
+<body style="width:1000px;margin:50px auto;" >
+
+	这个有一篇文章: CSS制作水平垂直居中对齐（http://www.w3cplus.com/css/vertically-center-content-with-css）,特殊的情况的可以参考这篇文章里面的做法，
+	经常用的如下，水平居中，最好知道宽度，这里不考虑用js来实现水平、垂直居中
+
+    <h3> 纯文本垂直居中 --- 单行垂直居中  </h3>
+    <p class="border" style="line-height:50px;">我是纯文本，看我垂直居中了吗？</p>
+
+    <h3> 纯文本水平居中 </h3>
+    <p class="border" style="line-height:50px;text-align:center;">我是纯文本，看我水平居中了吗？</p>
+
+    <h3> 文本图片垂直居中 </h3>
+	<div class="border">
+		<div style="height:30px;padding:10px 0;width:150px;margin:0 auto;">
+			<span style="float:left;display: inline-block;width:20px;height:30px;background:url('img.jpg');"> </span>
+			<span style="line-height:30px;margin-left:10px;float:left;">数据正在加载...</span>
+		</div>
+	</div>
+</body>
+
+</html>
+
+

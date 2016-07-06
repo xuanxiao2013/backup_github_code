@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+        <title>iknockdoor</title>
+        <description>iknockdoor - xuanxiao</description>
+        <link>http://username.github.io</link>
+        <link>http://username.github.io</link>
+        <lastBuildDate>2014-04-14T11:35:25+08:00</lastBuildDate>
+        <pubDate>2014-04-14T11:35:25+08:00</pubDate>
+        <ttl>1800</ttl>
+
+
+        <item>
+                <title>test</title>
+                <description>&lt;p&gt;hello&lt;/p&gt;</description>
+                <link>http://username.github.io/2014/04/14/test</link>
+                <guid>http://username.github.io/2014/04/14/test</guid>
+                <pubDate>2014-04-14T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>关于锻炼</title>
+                <description>&lt;p&gt;&lt;img src=&quot;/img/about-exercise.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;自己很喜欢这张照片，每次看见，都感觉不一样，心里为之一振，坐不住，想动。&lt;/p&gt;
+
+&lt;p&gt;给振哥看过这张照片，振哥的第一反应就是惊讶，觉得我的这取向有问题，我是想说，你想歪了。&lt;/p&gt;
+
+&lt;p&gt;之前关于这些肌肉男，尤其像施瓦辛格这样的，都觉得有点浑身起鸡皮疙瘩。但现在不一样，算是一种敬佩吧。&lt;/p&gt;
+
+&lt;p&gt;经常锻炼身体的人知道那一寸一寸的肌肉，那线条，是得有多强的毅力，坚持，以及对自己的严格要求。&lt;/p&gt;
+
+&lt;p&gt;之前有个朋友说我，不就跑个步吗，那来的那么多的感受和感慨啊，我不知道怎么回答，因人而异吧。&lt;/p&gt;
+
+&lt;p&gt;你可能跑过400米，没啥感觉，可能唯一的感觉就是累，那你就跑个20公里，跑个40公里，越野100公里， 跑1个小时，3个小时，24个小时，跑到让你自己崩溃，坚持还是放弃，你会发现你对自己就有了重新的认识。&lt;/p&gt;
+
+&lt;p&gt;为啥说敬佩施瓦辛格，那你因为你不了解你的身体。人的这个身体很特别，有很强的适应性，之前跑1小时， 你都坚持不下来，累的半死，但坚持一段时间，你会发现，跑1个小时没有任何问题，那是你的身体适应了。 要是之后，你有中间一段时间没有坚持跑，你就会发现，好像又和之前一样的累。肌肉锻炼也一样，肌肉也会适应， 你想让它变的更强壮，只有持续不断的加大不断的刺激，更多的重量，更过的次数。&lt;/p&gt;
+
+&lt;p&gt;每次看到这张照片，看见的是他对自己极限的超越。&lt;/p&gt;
+
+&lt;p&gt;强者不是战胜别人，而是战胜自己。&lt;/p&gt;
+
+&lt;p&gt;请珍惜你身边那些自虐的傻子吧。&lt;/p&gt;</description>
+                <link>http://username.github.io/2014/04/11/about-exercise</link>
+                <guid>http://username.github.io/2014/04/11/about-exercise</guid>
+                <pubDate>2014-04-11T00:00:00+08:00</pubDate>
+        </item>
+
+
+</channel>
+</rss>

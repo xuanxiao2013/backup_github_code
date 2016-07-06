@@ -1,0 +1,30 @@
+@import "compass/reset";
+
+
+.appContainer{
+  width:600px;margin:20px auto;
+
+  .todoHeader{
+    height: 30px;
+  }
+
+  .todoList{
+
+    .selectTxt{text-decoration: line-through;}
+  }
+
+  .todoFooter{
+    height: 30px;
+    .txt{line-height: 30px;}
+    .btns{
+      float: right;
+      a{
+        margin-left: 15px;float: left;line-height: 30px;padding: 0 10px;text-align: center;display: inline-block;cursor: pointer;
+      }
+      .selected{border:1px solid #ccc;}
+    }
+
+
+  }
+
+}

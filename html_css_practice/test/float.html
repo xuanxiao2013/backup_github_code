@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>float 测试</title>
+
+    <style>
+        .parentBorder {
+            border:1px solid green;
+            padding:10px;
+        }
+        .sonborder {
+            border:1px solid red;
+            height:100px;
+            width:200px;
+        }
+        .clearfix:after {
+            content:".";
+            visibility: hidden;
+            display: block;
+            height: 0;
+            clear: both;
+        }
+		.clearfix{
+			zoom:1;
+		}
+    </style>
+
+
+</head>
+
+<body>
+
+    <h3>清除浮动方法1 添加空标签</h3>
+    <div class="parentBorder">
+        <div class="sonborder" style="float:left;"></div>
+        <div style="clear:both;"></div>
+    </div>
+
+    <h3>清除浮动方法2 overflow:hidden</h3>
+    <div class="parentBorder" style="overflow:hidden;">
+        <div class="sonborder" style="float:left;"></div>
+    </div>
+    <h3>清除浮动方法3 overflow:auto</h3>
+    <div class="parentBorder" style="overflow:auto;">
+        <div class="sonborder" style="float:left;"></div>
+    </div>
+
+    <h3>清除浮动方法4 after ------ 推荐使用</h3>
+    <div class="parentBorder clearfix">
+        <div class="sonborder" style="float:left;"></div>
+    </div>
+
+
+    <h3>清除浮动方法5 父级指定搞定</h3>
+    <div class="parentBorder" style="height:110px;">
+        <div class="sonborder" style="float:left;"></div>
+    </div>
+	
+	<h3>清除浮动方法6 父级也跟着浮动</h3>
+    <div class="parentBorder" style="float:left;">
+        <div class="sonborder" style="float:left;"></div>
+    </div>
+</body>
+
+</html>
+

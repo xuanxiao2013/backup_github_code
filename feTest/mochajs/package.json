@@ -1,0 +1,21 @@
+{
+  "name": "mochajs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha":"^2.4.4",
+    "chai": "*",
+    "chai-as-promised": "*",
+    "superagent":"*",
+    "assert":"^1.3.0"
+  },
+  "scripts": {
+    "test": "mocha tests/ -w -t 5000",
+    "dot": "mocha --reporter dot tests/ -t 5000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

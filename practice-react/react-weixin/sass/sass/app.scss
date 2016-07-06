@@ -1,0 +1,41 @@
+@import "compass/reset";
+.mainContainer{
+    position: relative;font-size: 16px;
+    .topHeader{
+        height:60px;background-color: #333;position: fixed;top:0;overflow: hidden;
+        width: 100%;line-height: 60px;
+
+        .leftTxt{
+            float: left;width:30%;line-height: 60px;text-indent: 10px;color:#FFF;
+        }
+        .rightIcon{
+            float: right;width:70%;font-size: 14px;
+
+            .addIcon{
+                float: right;width: 60px;line-height: 60px;text-align: center;color:#FFF;  cursor: pointer;
+            }
+            .search{
+                float: right;width: 60px;line-height: 60px;text-align: center;color:#FFF;cursor: pointer;
+            }
+        }
+    }
+
+    .middleContent{
+        margin:60px 0;
+    }
+
+    .bottomFooter{
+        height:60px;background-color: #333;position: fixed;bottom:0;
+        width: 100%;line-height: 60px;
+
+        .navUl{
+            margin:10px 0;height:40px;width:100%;
+            .navLi{
+                width:25%;line-height: 40px;font-size: 14px;
+                float: left;text-align: center;color:#FFF;cursor: pointer;
+            }
+        }
+    }
+
+
+}

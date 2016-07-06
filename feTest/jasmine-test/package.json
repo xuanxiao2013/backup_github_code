@@ -1,0 +1,19 @@
+{
+	"name": "jasmine",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "node tests/index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"dependencies": {
+		"jasmine": "^2.4.0",
+		"jasmine-ajax": "^3.2.0"
+	},
+	"license": "ISC",
+	"devDependencies": {
+		"jasmine-ajax": "^3.2.0"
+	}
+}

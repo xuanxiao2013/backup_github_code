@@ -1,0 +1,294 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.calendarContainer {
+  width: 320px;
+  height: 440px;
+  margin: 20px auto;
+  font-size: 12px;
+  position: relative;
+}
+.calendarContainer .calendarHeader {
+  height: 60px;
+  background-color: #00bcd4;
+  color: #fff;
+}
+.calendarContainer .calendarHeader .monthTxt {
+  height: 60px;
+  overflow: hidden;
+}
+.calendarContainer .calendarHeader .monthTxt .m1 {
+  float: left;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+}
+.calendarContainer .calendarHeader .monthTxt .m2 {
+  float: left;
+  width: 60px;
+  height: 40px;
+  padding: 10px 0;
+}
+.calendarContainer .calendarHeader .monthTxt .m2 .a {
+  display: inline-block;
+  height: 20px;
+  width: 60px;
+  line-height: 20px;
+}
+.calendarContainer .calendarHeader .monthTxt .m2 .b {
+  display: inline-block;
+  height: 20px;
+  width: 60px;
+  line-height: 20px;
+}
+.calendarContainer .calendarBody {
+  height: 340px;
+}
+.calendarContainer .calendarBody .dayBody {
+  height: 310px;
+  width: 280px;
+  margin: 0 auto;
+}
+.calendarContainer .calendarBody .dayBody .weekUl {
+  height: 30px;
+}
+.calendarContainer .calendarBody .dayBody .weekUl .weekLi {
+  line-height: 30px;
+  float: left;
+  width: 40px;
+  text-align: center;
+}
+.calendarContainer .calendarBody .dayBody .dayUl {
+  height: 30px;
+}
+.calendarContainer .calendarBody .dayBody .dayUl .dayLi {
+  line-height: 38px;
+  float: left;
+  width: 38px;
+  text-align: center;
+  border: 1px solid #fff;
+  font-size: 18px;
+  cursor: pointer;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transition: all 0.2s ease-out 0s;
+  -o-transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out;
+  -webkit-transition-delay: 0s;
+  transition: all 0.2s ease-out 0s;
+}
+.calendarContainer .calendarBody .dayBody .dayUl .dayLi:hover {
+  border: 1px solid #00bcd4;
+  background-color: #00bcd4;
+  color: #fff;
+}
+.calendarContainer .calendarBody .hourBody {
+  height: 28px;
+  line-height: 28px;
+  margin: 0 20px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+.calendarContainer .calendarBody .hourBody .leftTxt {
+  float: left;
+}
+.calendarContainer .calendarBody .hourBody .rightTxt {
+  float: right;
+}
+.calendarContainer .calendarFooter {
+  height: 30px;
+  padding: 5px 0;
+  text-align: center;
+  width: 240px;
+  margin: 0 auto;
+}
+.calendarContainer .calendarFooter .btn {
+  border: 1px solid #ccc;
+  line-height: 30px;
+  text-align: center;
+  width: 118px;
+  display: inline-block;
+  cursor: pointer;
+  float: left;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-transition: all 0.2s ease-out 0s;
+  -o-transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out;
+  -webkit-transition-delay: 0s;
+  transition: all 0.2s ease-out 0s;
+}
+.calendarContainer .calendarFooter .btn:hover {
+  background-color: #ccc;
+}
+.calendarContainer .calendarFooter .submitBtn {
+  margin-left: -1px;
+  -moz-border-radius: 0 30px 30px 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 30px 30px 0;
+}
+.calendarContainer .calendarFooter .cancleBtn {
+  margin-left: -1px;
+  -moz-border-radius: 30px 0 0 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px 0 0 30px;
+}
+.calendarContainer .selectMonth {
+  position: absolute;
+  bottom: 0;
+  width: 320px;
+  background-color: #FFF;
+  z-index: 2;
+}
+.calendarContainer .selectMonth .dateTimeTxt {
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.calendarContainer .selectMonth .monthContainer {
+  border: 1px solid #ccc;
+  border-left-width: 0;
+  margin: 5px;
+}
+.calendarContainer .selectMonth .monthContainer .lineUl {
+  height: 30px;
+}
+.calendarContainer .selectMonth .monthContainer .lineUl .lineLi {
+  float: left;
+  width: 100px;
+  text-align: center;
+  line-height: 30px;
+  color: #ccc;
+}
+.calendarContainer .selectMonth .monthContainer .lineUl .lineLi:first-child {
+  border-left: 6px solid #ccc;
+}
+.calendarContainer .selectMonth .monthContainer .lineMiddle {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  height: 40px;
+}
+.calendarContainer .selectMonth .monthContainer .lineMiddle .lineLi {
+  line-height: 40px;
+  color: #00bcd4;
+}
+.calendarContainer .selectMonth .monthContainer .lineMiddle .lineLi:first-child {
+  border-left-color: #00bcd4;
+}
+.calendarContainer .selectMonth .monthContainer .opacity1 .lineLi {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+}
+.calendarContainer .selectMonth .monthContainer .opacity2 .lineLi {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+.calendarContainer .selectMonth .btns {
+  height: 30px;
+  padding: 5px 0;
+  text-align: center;
+  width: 240px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.calendarContainer .selectMonth .btns .btn {
+  border: 1px solid #ccc;
+  line-height: 30px;
+  text-align: center;
+  width: 118px;
+  display: inline-block;
+  cursor: pointer;
+  float: left;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-transition: all 0.2s ease-out 0s;
+  -o-transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out;
+  -webkit-transition-delay: 0s;
+  transition: all 0.2s ease-out 0s;
+}
+.calendarContainer .selectMonth .btns .btn:hover {
+  background-color: #ccc;
+}
+.calendarContainer .selectMonth .btns .submitBtn {
+  margin-left: -1px;
+  -moz-border-radius: 0 30px 30px 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 30px 30px 0;
+}
+.calendarContainer .selectMonth .btns .cancleBtn {
+  margin-left: -1px;
+  -moz-border-radius: 30px 0 0 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px 0 0 30px;
+}
+.calendarContainer .shadowLayout {
+  position: absolute;
+  top: 0;
+  background-color: #000;
+  height: 440px;
+  width: 320px;
+  z-index: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+}

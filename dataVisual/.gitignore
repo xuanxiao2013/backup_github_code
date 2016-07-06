@@ -1,0 +1,6 @@
+.bin/
+.idea/
+node_modules/
+".gitignore
+dist/
+.sass-cache/

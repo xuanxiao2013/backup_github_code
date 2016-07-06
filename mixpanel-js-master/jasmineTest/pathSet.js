@@ -1,0 +1,1 @@
+window.MIXPANEL_CUSTOM_LIB_URL = '../mixpanel.js';

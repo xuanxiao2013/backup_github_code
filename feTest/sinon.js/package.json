@@ -1,0 +1,17 @@
+{
+  "name": "sinon.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/ -w "
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "mocha":"^2.4.4",
+    "chai": "^3.5.0",
+    "sinon": "^1.7.2"
+  },
+  "license": "ISC"
+}

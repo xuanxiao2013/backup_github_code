@@ -1,0 +1,35 @@
+{
+	"asi": false,
+	"curly": true,
+	"expr": true,
+	"newcap": false,
+	"regexdash": true,
+	"trailing": true,
+	"undef": true,
+	
+	"unused": false,
+	
+	"maxerr": 100,
+
+	"eqnull": true,
+	"evil": true,
+	"sub": true,
+
+	"browser": true,
+	"wsh": true,
+
+	"predef": [
+		"seajs",
+		"define",
+		"require",
+		"exports",
+		"module",
+		"$",
+		"jQuery"
+	],
+	
+	"globals": {
+	    "cnzz": true,
+	    "log": true
+  }
+}

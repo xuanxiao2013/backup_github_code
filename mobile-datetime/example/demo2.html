@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>mobile datetime</title>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″ />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link href="../src/css/calendar.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<script src="../src/js/lib/jquery.js"></script>
+<script src="../src/js/lib/fecha/fecha.js"></script>
+
+<script src="../src/js/src/common.js"></script>
+<script src="../src/js/src/calendarSelectDetail.js"></script>
+<script src="../src/js/src/calendarHeader.js"></script>
+<script src="../src/js/src/calendarBody.js"></script>
+<script src="../src/js/src/calendar.js"></script>
+
+
+<script>
+
+    var caleander = new Calendar({
+        today: new Date(),
+        selectDate: '2015-04-28',
+        maxDate: '2040-04-25',
+        minDate: '2000-04-04'
+    });
+
+//    var caleander = new Calendar({
+//        today: new Date(),
+//        selectDate: '2014-11-02',
+//        maxDate: '2016-04-25',
+//        minDate: '2014-04-04'
+//    });
+
+//    var caleander = new Calendar({
+//        today: new Date(),
+//        selectDate: '2015-02-02',
+//        maxDate: '2016-04-25',
+//        minDate: '2014-04-04'
+//    });
+
+    //console.log(caleander)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+
+@import "compass/reset";
+@import "compass/css3";
+
+$fontpath: '../font';
+@font-face {
+    $ver: 201509081310;
+    font-family: "iconfont";
+    src: url($fontpath + '/iconfont.eot?v=' + $ver); /* IE9*/
+    src: url($fontpath + '/iconfont.eot?v=' + $ver + '#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url($fontpath + '/iconfont.woff?v=' + $ver) format('woff'), /* chrome、firefox */
+    url($fontpath + '/iconfont.ttf?v=' + $ver) format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url($fontpath + '/iconfont.svg?v=' + $ver + '#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+@mixin iconFont{
+    font-family:"iconfont" !important;
+    font-size:12px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+@mixin wordCut{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin css3Animate{
+    @include transition(all 0.2s ease-out 0s);
+}
+
+$defaultColor: #34495e;
+
+$mainColor: #1abc9c;
+$mainHoverColor: #2fe2bf;
+$mainActiveColor: #16a085;
+$mainColorPartner: #FFFFFF;
+$mainBorderColor: #d2dae2;
+
+$disableBgColor: #eaeded;
+$disableColor: #cad2d3;
+
+
+.select-container{
+    display: none;font-size: 12px;position: relative;z-index: 1;background-color: #FFFFFF;
+    .select-header{
+        height: 34px;border:1px solid $mainBorderColor;line-height: 34px;padding:0 10px;
+        position: relative;z-index: 1;
+        @include border-radius(2px);
+        .header-container{
+            cursor: pointer;
+        }
+        &:hover{
+            @include css3Animate();
+            border:1px solid $mainActiveColor;
+        }
+    }
+    .select-header-single{
+        .header-container{
+            @include wordCut();
+        }
+    }
+    .select-header-multiple{
+        height: auto;padding:0 4px;
+        .header-container{
+            .mt{
+                display: inline-block;max-width: 70px;line-height: 24px;padding:0 5px;
+                cursor: pointer;background-color: $mainColor;color: $mainColorPartner;
+                border: 1px solid $mainColor;
+                margin-right:5px;margin-top:4px;vertical-align: top;
+                @include border-radius(2px);
+                @include wordCut();
+                @include css3Animate();
+
+                .close{
+                    float: left;width: 12px;margin-right: 5px;display: none;
+                    @include iconFont();
+                    @include css3Animate();
+                    &:before{color:$mainColorPartner;content: "\e557";font-size: 12px;}
+                    &:hover{
+                        @include transform(rotate(180deg));
+                        &:before{color:$mainColorPartner;}
+                    }
+                }
+
+                &:hover{
+                    background-color: $mainHoverColor;
+                    border-color: $mainHoverColor;
+                    .close{
+                        display: inline-block;;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .select-list{
+        display:none;margin-top:-1px;
+        .list-container{
+            border:1px solid $mainBorderColor;position: relative;
+            @include border-radius(2px);
+
+            .list-tab{
+                height:32px;border-bottom:1px solid #d2dae2;line-height:32px;
+                .tab{
+                    float: left;
+                    .tabHeaderContent{
+                        cursor: pointer;
+                        border-left:1px solid $mainBorderColor;text-align: center;line-height: 32px;
+                    }
+                    &:first-child{
+                        .tabHeaderContent{
+                            border-left:none;
+                        }
+                    }
+                }
+                .active{
+                    .tabHeaderContent{
+                        background-color: $mainColor;color: $mainColorPartner;
+                    }
+                }
+            }
+
+            .list-search{
+                position:relative;border-bottom:1px solid $mainBorderColor;padding:10px;background-color:#fff;
+                .inputSearch{
+                    height:32px;border:1px solid $mainBorderColor;line-height:32px;padding: 0;width: 100%;
+                    @include transition(all 0.2s ease-out 0s);text-indent: 10px;
+                    &:focus{
+                        border:1px solid $mainColor;
+                    }
+                }
+            }
+            .list-list{
+                .listItem{
+                    height:34px;line-height: 34px;cursor: pointer;
+                    border-bottom:1px dashed $mainBorderColor;
+                    background-color:#FFFFFF;
+                    padding:0 10px;
+                    position: relative;
+                    @include transition(background-color 0.2s ease-out 0s);
+                    &:hover{background-color:$mainColor;color:$mainColorPartner;}
+                    &:last-child{border-bottom:1px solid #FFFFFF;}
+
+                    &:after{
+                        height: 0;
+                        content: '';
+                        clear: both;
+                    }
+
+                    .itemTxt{
+                        @include wordCut();
+                    }
+
+                    label{
+                        cursor: pointer;
+                    }
+
+                    .checkbox{
+                        display: inline-block;float: left;width: 20px;margin-top:10px;
+                    }
+                    .mulCheckbox{
+                        margin-left:20px;
+                    }
+                }
+                .active{
+                    background-color:$mainColor;color: $mainColorPartner;
+                }
+                .loading, .noMatch, .noData{
+                    line-height:34px;text-align: center;border-bottom:none;
+                    cursor: default;
+                    &:hover{background-color:#fff;color:$defaultColor;}
+                }
+            }
+        }
+
+    }
+
+    .select-progress{
+        position: absolute;top:0;left:0;height: 1px;width: 100%;z-index: 2;display: none;
+        .bar{
+            background-color: $mainActiveColor;height: 1px;
+        }
+    }
+}
+
+.select-container-disable{
+    background-color: $disableBgColor;
+    .select-header{
+        .header-container{
+            cursor: not-allowed;
+            .mt{
+                cursor: not-allowed;
+                .close{
+                    &:hover{
+                        @include transform(rotate(0deg));
+                        &:before{color:$defaultColor;}
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,211 @@
+@import "compass/reset";
+@import "compass/css3/opacity";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/transition";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/transform";
+
+@mixin css3Animate{
+  @include transition(all 0.2s ease-out 0s);
+}
+
+@mixin bTns{
+    height: 30px;padding: 5px 0;text-align: center;
+    width: 240px;margin: 0 auto;
+    .btn{
+      border: 1px solid $borderColor;line-height: 30px;text-align: center;
+      width: 118px;display: inline-block;
+      cursor: pointer;float: left;
+      @include border-radius(2px);
+      @include  css3Animate();
+      &:hover{
+        background-color: #ccc;
+      }
+    }
+    .submitBtn{
+      margin-left: -1px;
+      @include border-radius(0 30px 30px 0);
+    }
+    .cancelBtn{
+      margin-left: -1px;
+      @include border-radius(30px 0 0 30px);
+    }
+}
+
+$mainBgColor: #00bcd4;
+$txtColor:#fff;
+$borderColor:#ccc;
+
+.calendarContainer{
+  width: 320px;height: 440px;margin: 0 auto;font-size: 12px;position: relative;
+  //border: 1px solid $mainBgColor;
+
+
+  .calendarHeader{
+    height: 60px;background-color: $mainBgColor;color: $txtColor;cursor: pointer;
+    .monthHeader{
+      .monthTxt{
+        height: 60px;overflow: hidden;float: left;
+        .m1{
+          float: left;width: 60px;height: 60px;text-align: center;line-height: 60px;font-size: 24px;
+        }
+        .m2{
+          float: left;width: 60px;height: 40px;padding: 10px 0;
+          .a{
+            display: inline-block;height: 20px;width: 60px;line-height: 20px;
+          }
+          .b{
+            display: inline-block;height: 20px;width: 60px;line-height: 20px;
+          }
+        }
+      }
+
+    }
+    .monthBtn{
+      float: right;width: 120px;height: 40px;padding: 10px 0;
+        .a{
+          display: inline-block;height: 40px;width: 60px;line-height: 40px;text-align: center;
+        }
+        .b{
+          display: inline-block;height: 40px;width: 60px;line-height: 40px;text-align: center;
+        }
+    }
+
+  }
+
+  .calendarBody{
+    height: 340px;
+    .containerBody{
+      height: 310px;width: 280px;margin: 0 auto;
+      .weeksBody{
+        .weekUl{
+          height: 30px;
+          .weekLi{
+            line-height: 30px;float: left;width: 40px;text-align: center;
+          }
+        }
+
+      }
+      .daysBody{
+        height: 240px;width: 280px;margin: 0 auto;
+        .dayUl{
+          .dayLi{
+            line-height: 38px;float: left;width: 38px;text-align: center;
+            border: 1px solid $txtColor;font-size: 18px;cursor: pointer;
+            @include border-radius(50%);
+            @include  css3Animate();
+            &:hover{
+              border: 1px solid $mainBgColor;
+              background-color: $mainBgColor;
+              color: $txtColor;
+            }
+          }
+          .disabled{
+            color: #ccc;
+            cursor: default;
+            &:hover{
+              border: 1px solid $txtColor;
+              background-color: $txtColor;
+              color: #ccc;
+            }
+          }
+          .pSelected{
+            border: 1px solid $mainBgColor;
+            background-color: $txtColor;
+            color: $mainBgColor;
+          }
+          .selected{
+            border: 1px solid $mainBgColor;
+            background-color: $mainBgColor;
+            color: $txtColor;
+          }
+        }
+
+      }
+      .dateInfo{
+        height: 28px;line-height: 28px;margin: 0 20px;
+        border-top: 1px solid $borderColor;
+        border-bottom: 1px solid $borderColor;cursor: pointer;
+        .leftTxt{
+          float: left;
+        }
+        .rightTxt{
+          float: right;
+        }
+      }
+
+
+    }
+
+    .hourBody{
+      height: 28px;line-height: 28px;margin: 0 20px;
+      border-top: 1px solid $borderColor;
+      border-bottom: 1px solid $borderColor;cursor: pointer;
+      .leftTxt{
+        float: left;
+      }
+      .rightTxt{
+        float: right;
+      }
+    }
+
+  }
+
+  .calendarFooter{
+    @include bTns();
+  }
+
+  .calendarSelectDetail{
+    position: absolute;bottom: 0;width: 320px;background-color: #FFF;
+    z-index: 4;
+
+    .dateTimeTxt{
+      line-height: 30px;text-align: center;font-weight: bold;margin-top: 10px;
+
+    }
+    .detailContainer{
+      border: 1px solid #ccc;margin:5px;height: 150px;border-left-width: 6px;position: relative;
+
+      .itemColumnContainer{
+        height: 150px;position: relative;width: 101px;float: left;
+        overflow: hidden;background-color: #EEEEEE;
+        .itemColumn{
+          width: 100%;position: relative;z-index: 2;
+          .itemLi {
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+          }
+          .active{
+            color:red;font-size: 14px;
+          }
+        }
+      }
+
+      .activeLineContainerLi{
+        height: 32px;position: absolute;top:59px;left: -5px;width: 300px;
+        border-left:6px solid $mainBgColor;z-index: 1;
+        .activeLine{
+          border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;height: 30px;background-color: #FFF;
+          .txtYear{ position: absolute; top:1px; left:66px;line-height: 30px;color:red;}
+          .txtMonth{ position: absolute; top:1px; left:160px;line-height: 30px;color:red;}
+          .txtDay{ position: absolute; top:1px; left:260px;line-height: 30px;color:red;}
+        }
+      }
+
+
+    }
+    .bTns{
+      @include bTns();margin-bottom: 10px;
+    }
+
+  }
+
+  .calendarShadowLayout{
+    position: absolute;top:0;background-color: #000;height: 440px;width: 320px;z-index: 3;display: none;
+    @include opacity(0.4);
+
+  }
+
+}

@@ -1,0 +1,17 @@
+{
+	"name": "karma",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "karma start"
+	},
+	"keywords": [],
+	"author": "",
+	"dependencies": {
+		"karma": "^0.13.8",
+		"karma-chrome-launcher": "^0.2.2",
+		"karma-jasmine": "^0.3.6"
+	},
+	"license": "ISC"
+}
